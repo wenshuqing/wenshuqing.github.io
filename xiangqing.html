@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>详情</title>
+  <link rel="stylesheet" href="./css/initialize.css" />
+  <link rel="stylesheet" href="./css/font_gt189293n69/iconfont.css" />
+  <link rel="stylesheet" href="./css/font_oqruja2w3sb/iconfont.css" />
+  <link rel="stylesheet" href="./css/font_2zjs10a8i8p/iconfont.css">
+  <link rel="stylesheet" href="./css/font_gh6gnrvdlxl/iconfont.css">
+  <link rel="stylesheet" href="./css/font_b9qwebhkzub/iconfont.css">
+  <link rel="stylesheet" href="./css/shouye.css" />
+  <!-- <link rel="stylesheet" href="./css/swiper.min.css">
+  <link rel="stylesheet" href="./css/animate.min.css"> -->
+  <link rel="stylesheet" href="./css/xiangqing.css">
+  <style>
+    /* 放大镜放大2倍 */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+      content: "";
+      display: block;
+      clear: both;
+      visibility: hidden;
+      line-height: 0;
+      height: 0;
+      font-size: 0;
+    }
+
+    .clearfix {
+      *zoom: 1;
+    }
+
+    .datu {
+      width: 350px;
+      height: 550px;
+      /* border: 1px solid #ccc; */
+      /* margin-left: 20px; */
+      position: absolute;
+      cursor: move;
+      float: left;
+      left: 170px;
+      top: 20px;
+    }
+
+    .datu img {
+      width: 350px;
+      height: 550px;
+    }
+
+    .magnifier {
+      width: 175px;
+      height: 275px;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+
+    .big {
+      width: 350px;
+      height: 550px;
+      /* border: 1px solid #ccc; */
+      /* float: left;
+        margin-left: 20px; */
+      position: absolute;
+      top: -35px;
+      left: 526px;
+      overflow: hidden;
+      display: none;
+    }
+
+    .big img {
+      width: 700px;
+      height: 1100px;
+      position: absolute;
+
+    }
+
+    /* .xiaotu {
+        /* float: left; 
+      } */
+    .pic {
+      position: absolute;
+      top: 0;
+      height: 640px;
+      transition: margin-left 1s;
+      overflow: hidden;
+    }
+
+    .pic div {
+
+      width: 74px;
+      height: 128px;
+      margin-left: 20px;
+      /* margin-top: 20px; */
+
+    }
+
+    .pic div:nth-child(1) {
+      border-color: #000;
+    }
+
+    .pic div:nth-child(5) {
+      margin-right: 20px;
+    }
+
+    /* .xiaotu a {
+        display: block;
+        float: left;
+        text-decoration: none;
+        color: #ccc;
+        font-size: 20px;
+        line-height: 50px;
+        position: absolute;
+        margin-top: 20px;
+        top: 20px;
+      } */
+    .left {
+      left: 0;
+    }
+
+    .right {
+      right: 0;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <header>
+    <div class="header-main clearfix">
+      <div class="header-1 clearfix">
+        <div class="gouwu">
+          <span class="iconfont icon-gouwudai"></span>购物袋[0]
+        </div>
+        <div class="shoucang">
+          <span class="iconfont icon-jiahao"></span> 我的收藏
+        </div>
+        <div class="zhanghu">我的账户</div>
+        <div class="zhuce">注册</div>
+        <div class="denglu">登录</div>
+      </div>
+      <div class="header-2 clearfix">
+        <span class="logo">TRENDINAO</span>
+        <input class="search" type="text" placeholder="搜索您感兴趣的内容" /><span class="iconfont icon-sousuo"></span>
+      </div>
+      <div class="header-3 clearfix" style="top:0">
+        <ul class="header-ul clearfix">
+          <li>首页</li>
+          <li>品牌动向</li>
+          <li>新品资讯</li>
+          <li data-index="4">春夏大减价</li>
+          <li data-index="5">到店新品</li>
+          <li data-index="6">跨界合作</li>
+          <li data-index="7">特惠专区</li>
+          <li data-index="8">服装</li>
+          <li data-index="9">鞋/配饰</li>
+          <li class="shijian">客服营业时间：9：00-18：00</li>
+        </ul>
+        <div data-index1="4" class="li4 header-3li clearfix">
+          <p class="header-3li-p">BIG SALE</p>
+          <ul class="header-3li-ul">
+            <li>
+              <a class="header-3li-a" href="#">7折专区</a>
+            </li>
+            <li>
+              <a class="header-3li-a" href="#">9折专区</a>
+            </li>
+          </ul>
+        </div>
+        <div data-index1="5" class="li5 header-3li clearfix">
+          <p class="header-3li-p">NEW IN</p>
+          <ul class="header-3li-ul">
+            <li><a class="header-3li-a" href="#">6月20号到店</a></li>
+            <li> <a class="header-3li-a" href="#">5月14号到店</a></li>
+            <li><a class="header-3li-a" href="#">4月30号到店</a></li>
+          </ul>
+        </div>
+        <div data-index1="6" class="li6 header-3li clearfix">
+          <p class="header-3li-p">IP</p>
+          <ul class="header-3li-ul">
+            <li> <a class="header-3li-a" href="#">侏儒兔系列</a></li>
+            <li><a class="header-3li-a" href="#">狮子王联名款</a></li>
+          </ul>
+        </div>
+        <div data-index1="7" class="li7 header-3li clearfix">
+          <p class="header-3li-p">VIP SALE</p>
+          <ul class="header-3li-ul">
+            <li><a class="header-3li-a" href="#">2件9折 3件8折</a></li>
+            <li><a class="header-3li-a" href="#">秒杀专区</a></li>
+            <li><a class="header-3li-a" href="#">新品秒杀</a></li>
+          </ul>
+        </div>
+        <div data-index1="8" class="li8 header-3li clearfix">
+          <p class="header-3li-p">NEW IN_SHANG</p>
+          <ul class="header-3li-ul">
+            <li><a href="">T恤/POLO</a></li>
+            <li><a href="">衬衫</a></li>
+            <li><a href="">卫衣</a></li>
+            <li><a href="">夹克</a></li>
+          </ul>
+          <ul class="header-3li-ul">
+            <li><a href="">裤装</a></li>
+            <li><a href="">风衣</a></li>
+            <li><a href="">针织衫</a></li>
+            <li><a href="">皮衣</a></li>
+          </ul>
+          <ul class="header-3li-ul">
+            <li><a href="">羽绒服</a></li>
+            <li><a href="">棉衣</a></li>
+            <li><a href="">毛呢大衣</a></li>
+            <li><a href="">西服</a></li>
+          </ul>
+        </div>
+        <div data-index1="9" class="li9 header-3li clearfix">
+          <p class="header-3li-p">SHOES</p>
+          <ul class="header-3li-ul">
+            <li><a href="">休闲鞋</a></li>
+            <li><a href="">凉鞋/拖鞋</a></li>
+            <li><a href="">包包</a></li>
+            <li><a href="">帽</a></li>
+          </ul>
+          <ul class="header-3li-ul">
+            <li><a href="">袜</a></li>
+            <li><a href="">其他配饰</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="header-4 clearfix">
+      <span class="header-home iconfont icon-fangzi">&nbsp;&nbsp;</span>
+      <span>>&nbsp;&nbsp;&nbsp;&nbsp;宽松连帽短袖风衣外套</span>
+    </div>
+    <div class="header3-copy clearfix" style="top:0">
+      <ul class="header-ul clearfix">
+        <li>首页</li>
+        <li>品牌动向</li>
+        <li>新品资讯</li>
+        <li data-index="4">春夏大减价</li>
+        <li data-index="5">到店新品</li>
+        <li data-index="6">跨界合作</li>
+        <li data-index="7">特惠专区</li>
+        <li data-index="8">服装</li>
+        <li data-index="9">鞋/配饰</li>
+        <li class="shijian">客服营业时间：9：00-18：00</li>
+      </ul>
+      <div data-index1="4" class="li4 header-3li clearfix">
+        <p class="header-3li-p">BIG SALE</p>
+        <ul class="header-3li-ul">
+          <li>
+            <a class="header-3li-a" href="#">7折专区</a>
+          </li>
+          <li>
+            <a class="header-3li-a" href="#">9折专区</a>
+          </li>
+        </ul>
+      </div>
+      <div data-index1="5" class="li5 header-3li clearfix">
+        <p class="header-3li-p">NEW IN</p>
+        <ul class="header-3li-ul">
+          <li><a class="header-3li-a" href="#">6月20号到店</a></li>
+          <li> <a class="header-3li-a" href="#">5月14号到店</a></li>
+          <li><a class="header-3li-a" href="#">4月30号到店</a></li>
+        </ul>
+      </div>
+      <div data-index1="6" class="li6 header-3li clearfix">
+        <p class="header-3li-p">IP</p>
+        <ul class="header-3li-ul">
+          <li> <a class="header-3li-a" href="#">侏儒兔系列</a></li>
+          <li><a class="header-3li-a" href="#">狮子王联名款</a></li>
+        </ul>
+      </div>
+      <div data-index1="7" class="li7 header-3li clearfix">
+        <p class="header-3li-p">VIP SALE</p>
+        <ul class="header-3li-ul">
+          <li><a class="header-3li-a" href="#">2件9折 3件8折</a></li>
+          <li><a class="header-3li-a" href="#">秒杀专区</a></li>
+          <li><a class="header-3li-a" href="#">新品秒杀</a></li>
+        </ul>
+      </div>
+      <div data-index1="8" class="li8 header-3li clearfix">
+        <p class="header-3li-p">NEW IN_SHANG</p>
+        <ul class="header-3li-ul">
+          <li><a href="">T恤/POLO</a></li>
+          <li><a href="">衬衫</a></li>
+          <li><a href="">卫衣</a></li>
+          <li><a href="">夹克</a></li>
+        </ul>
+        <ul class="header-3li-ul">
+          <li><a href="">裤装</a></li>
+          <li><a href="">风衣</a></li>
+          <li><a href="">针织衫</a></li>
+          <li><a href="">皮衣</a></li>
+        </ul>
+        <ul class="header-3li-ul">
+          <li><a href="">羽绒服</a></li>
+          <li><a href="">棉衣</a></li>
+          <li><a href="">毛呢大衣</a></li>
+          <li><a href="">西服</a></li>
+        </ul>
+      </div>
+      <div data-index1="9" class="li9 header-3li clearfix">
+        <p class="header-3li-p">SHOES</p>
+        <ul class="header-3li-ul">
+          <li><a href="">休闲鞋</a></li>
+          <li><a href="">凉鞋/拖鞋</a></li>
+          <li><a href="">包包</a></li>
+          <li><a href="">帽</a></li>
+        </ul>
+        <ul class="header-3li-ul">
+          <li><a href="">袜</a></li>
+          <li><a href="">其他配饰</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="header-4 header4-copy clearfix">
+      <span class="header-home iconfont icon-fangzi">&nbsp;&nbsp;</span>
+      <span>>&nbsp;&nbsp;&nbsp;&nbsp;宽松连帽短袖风衣外套</span>
+    </div>
+  </header>
+  <div class="banner clearfix">
+    <div class="banner-main clearfix">
+      <div class="banner-main-top clearfix">
+        <div class="pic clearfix">
+          <p class="jiantou shang"><span class="shangsanjiao">△</span></p>
+
+          <div class="swiper-slide">
+            <img src="images/min1.jpg" alt="" data-src="images/big1.jpg" data-pic="images/big1.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/min2.jpg" alt="" data-src="images/big2.jpg" data-pic="images/big2.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/min3.jpg" alt="" data-src="images/big3.jpg" data-pic="images/big3.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/min4.jpg" alt="" data-src="images/big4.jpg" data-pic="images/big4.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/min5.jpg" alt="" data-src="images/big5.jpg" data-pic="images/big5.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/min6.jpg" alt="" data-src="images/big6.jpg" data-pic="images/big6.jpg" />
+          </div>
+          <p class="jiantou xia"><span class="xiasanjiao">△</span></p>
+        </div>
+        <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
+
+        <div class="datu clearfix">
+          <img src="images/big1.jpg" alt="" />
+          <div class="magnifier"></div>
+        </div>
+        <div class="big"><img src="images/big1.jpg" alt="" /></div>
+        <div class="jieshao clearfix">
+          <p>TRENDIANO</p>
+          <span class="shuoming">宽松连帽短袖风衣外套</span>&nbsp;&nbsp;
+          <span class="bianma">33RC2092100510</span>
+          <p class="price">￥899</p>
+          <p class="yanse">
+            <span>颜色：&nbsp;&nbsp;</span>
+            <img src="./images/yanse1.jpg" alt="">
+            &nbsp;&nbsp;
+            <img src="./images/yanse2.jpg" alt="">
+          </p>
+          <p class="chima clearfix">
+            <span>尺码：&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>S&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>M&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>L&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>XL&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class='chimabiao'>尺码表</span>
+            <span class="iconfont icon-zhichiicon"></span>
+          </p>
+          <p class="goumai clearfix">
+            <span>一键购买</span>
+            <span class="jiahaoHe"><span class="jiahao">+</span></span>
+            <span class="jiashoucang">加入收藏</span>
+            <span>联系客服</span>
+          </p>
+          <a class="jieshao-a" href="">单笔消费满699免邮</a>
+          <div class="jiaru">加入购物袋</div>
+        </div>
+      </div>
+      <div class="banner-main-bottom clearfix">
+        <div class="banner-main-left clearfix">
+          <p>
+            <span>名称&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>宽松连帽短袖风衣外套</span>
+            <!-- <br> -->
+          </p>
+          <p>
+            <span>风格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>轻薄透气风衣，可以遮阳防晒不闷热；舒适的面料，潮流的设计，刚<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好合身的版型，值得尝试</span>
+            <!-- <br> -->
+          </p>
+          <p>
+            <span>纤维含量&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>产品或产品的某一部分含有2种及以上的纤维时，除了许可不标注的纤</span>
+            <!-- <br> -->
+          </p>
+          <p>
+            <span>小知识&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>维外，在标签上标明的每一种纤维含量允许偏差为5%，填充物的允许<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;偏差为10%.</span>
+          </p>
+        </div>
+        <div class="banner-main-right clearfix">
+          <p>
+            <span>面料成分</span>
+            <span>面料：棉纶100%</span>
+          </p>
+          <p>
+            <span>长度</span>
+            <span>常规</span>
+          </p>
+          <p>
+            <span>版型</span>
+            <span>宽松</span>
+          </p>
+          <div class="zhuyi-shi clearfix">
+            <span>洗涤</span>
+            <div class="zhuyi-img clearfix">
+              <img src="./images/xidi-1.png" alt="">
+              <img src="./images/xidi-2.png" alt="">
+              <img src="./images/xidi-3.png" alt="">
+              <img src="./images/xidi-4.png" alt="">
+              <img src="./images/xidi-5.png" alt="">
+              <img src="./images/xidi-6.png" alt="">
+              <img src="./images/xidi-7.png" alt="">
+              <p>30℃以下常规机洗</p>
+              <p>请扣合好后与同类颜色衣物洗涤</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="banner-main-bottom-footer"> -->
+        <div class="banner-main-bottom-bottom clearfix">
+          <div class="liulan">
+            <p>您浏览过的商品</p>
+            <img src="./images/liulan.jpg" alt="">
+          </div>
+          <p class="liulan-logo">TRENDIANO</p>
+          <p class="liulan-shuoming">宽松连帽短袖风衣外套</p>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+
+
+  </div>
+  <footer>
+    <div class="footer-top">
+      <div class="footer-top-main clearfix">
+        <div class="footer-top1 clearfix">
+          <span class="footer-tip1">活动日历</span>
+          <div class="month-date">
+            <span class="month">
+              JUNE
+            </span>
+            <span class="date"></span>
+          </div>
+          <img src="images/17.png" alt="" />
+          <div class="border-right"></div>
+        </div>
+
+        <div class="footer-top2">
+          <span class="footer-tip1">官方微信</span>
+          <img src="./images/weixin_code.png" alt="" />
+          <span class="weibo-tip">关注微博</span>
+          <div class="weibo clearfix">
+            <span class="iconfont icon-weibo"></span>
+            <a class="weiboWord">关注@TRENDIANO官方微博</a>
+          </div>
+          <div class="border-right"></div>
+        </div>
+        <div class="footer-top3">
+          <span class="footer-tip1">品牌资讯</span>
+          <img src="./images/18.jpg" alt="" />
+          <div class="border-right"></div>
+        </div>
+        <div class="footer-top4 clearfix">
+          <span class="footer-tip1">ABOUT US</span>
+          <p class="footer-top4-p">
+            <a href="#">购物流程</a>
+            <a href="#">支付方式</a>
+          </p>
+          <p class="footer-top4-p">
+            <a href="#">退货流程</a>
+            <a href="#">配送说明</a>
+          </p>
+          <p class="footer-top4-p">
+            <a href="#">关于我们</a>
+          </p>
+          <p class="footer-top4-p1"><span class="iconfont icon-duanxin"></span>&nbsp;&nbsp;&nbsp;联系客服</p>
+          <p class="footer-top4-p1"><span class="iconfont icon-dianhua"></span>&nbsp;&nbsp;&nbsp;客服400-880-0086</p>
+          <p class="footer-top4-p1">
+            <span class="iconfont icon-icon-test"></span>&nbsp;&nbsp;&nbsp;7天无条件退货</p>
+          <span class="zhifu iconfont icon-zhifubao"></span>
+          <span class="zhifu iconfont icon-caifutong"></span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom clearfix">
+      <div class="footer-bottom-main">
+        <span class="footer-bottom1">
+          TRENDIANO
+        </span>
+        <div class="footer-bottom2">
+          <p class="footer-bottom2-p1">
+            <a href="#" class="footerA1">隐私声明</a>
+            <a href="#" class="footerA2">联系我们</a>
+          </p>
+          <p class="footer-bottom-p2">Copyright @ 2010-2020 广州赫基信息科技有限公司版权所有 </p>
+          <p class="footer-bottom-p3">
+            <a href="#">粤ICP备10229258号-4</a>
+            <img src="./images/19.png" alt="">
+            <a href="#">粤公网安备44010602001993号</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- <script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate1.0.3.min.js"></script> -->
+  <script>
+    var nowTime = new Date();
+    var date1 = nowTime.getDate();
+    $(".date").html(date1);
+    var index;
+    $(".header-3 .header-ul li").mouseenter(function () {
+      index = parseInt($(this).attr("data-index"))
+      $(".header-3 .header-3li").eq(index - 4).fadeIn(500).siblings(".header-3li").fadeOut(1)
+    })
+
+    // $(".header-3 .header-ul li").mouseleave(function () {
+    //   // index=parseInt($(this).attr("data-index"))
+    //   $(".header-3 .header-3li").eq(index - 4).fadeOut(1)
+    // })
+
+    var ind;
+    $(".header3-copy .header-ul li").mouseenter(function () {
+      ind = parseInt($(this).attr("data-index"))
+      $(".header3-copy .header-3li").eq(ind - 4).fadeIn(500).siblings(".header-3li").fadeOut(1)
+    })
+
+    $(".header-3li").mouseenter(function () {
+      $(".header-ul li").off("mouseleave")
+      $(this).fadeIn(500).siblings(".header-3li").fadeOut(1)
+    })
+    $(".header-3li").mouseleave(function () {
+      $(this).fadeOut(1)
+    })
+
+    $(window).scroll(function () {
+      if ($(this).scrollTop() < 100) {
+        $(".header3-copy").css({
+          "display": "none"
+        })
+        $(".header-main .header-3").css("display", "block")
+
+        $(".header-main .header-4").css("display", "block")
+        $(".header4-copy").css({
+          "display": "none"
+        })
+      } else {
+        $(".header3-copy").css({
+          "display": "block"
+        })
+        $(".header-main .header-3").css("display", "none")
+
+        $(".header4-copy").css({
+          "display": "block"
+        })
+        $(".header-main .header-4").css("display", "none")
+      }
+    })
+    $(".xiaotu .pic div").click(function () {
+
+      $(".datu img").attr(
+        "src",
+        $(this)
+        .find("img")
+        .attr("data-src")
+      );
+      $(".big img").attr(
+        "src",
+        $(this)
+        .find("img")
+        .attr("data-pic")
+      );
+    });
+    $(".xiaotu .right").click(function () {
+      $(".xiaotu .pic").css("margin-left", -70);
+    });
+    $(".xiaotu .left").click(function () {
+      $(".xiaotu .pic").css("margin-left", 0);
+    });
+
+    $(".datu").mouseenter(function () {
+      $(".magnifier").css("display", "block");
+      $(".big").css("display", "block");
+    });
+    $(".datu").mouseleave(function () {
+      $(".magnifier").css("display", "none");
+      $(".big").css("display", "none");
+    });
+
+    var magnifierWidth = $(".magnifier").width();
+    var magnifierHeight = $(".magnifier").height();
+    var datuoffsetTop = $(".datu").offset().top;
+    var datuoffsetLeft = $(".datu").offset().left;
+    var datuWidth = $(".datu").width();
+    var datuHeight = $(".datu").height();
+    $(".datu").mousemove(function (event) {
+      var mouseX = event.pageX;
+      var mouseY = event.pageY;
+      console.log(magnifierWidth, mouseX, datuoffsetLeft);
+      var magnifierTop = mouseY - datuoffsetTop - magnifierHeight / 2;
+      var magnifierLeft = mouseX - datuoffsetLeft - magnifierWidth / 2;
+      //放大镜处理越界方法2
+      //鼠标位置 - 装放大镜大盒距离浏览器左边或者上边的距离-放大镜本身宽度或者高度的一半若大于 大盒大小减去放大镜后的大小 则越界
+      if (magnifierLeft <= 0) {
+        magnifierLeft = 0;
+      } else if (
+        mouseX - datuoffsetLeft - magnifierWidth / 2 >
+        datuWidth - magnifierWidth
+      ) {
+        magnifierLeft = datuWidth - magnifierWidth;
+      }
+      if (magnifierTop <= 0) {
+        magnifierTop = 0;
+      } else if (
+        mouseY - datuoffsetTop - magnifierHeight / 2 >
+        datuWidth - magnifierWidth
+      ) {
+        magnifierTop = datuHeight - magnifierHeight;
+      }
+      $(".magnifier").css({
+        left: magnifierLeft,
+        top: magnifierTop
+      });
+
+      $(".big img").css({
+        left: -2 * magnifierLeft,
+        top: -2 * magnifierTop
+      });
+    });
+
+    // var picTop
+    //   $(".shang").click(function(){
+    //   picTop=parseInt($(".pic").css("margin-top"))
+    //   console.log(picTop);
+
+    //   if(picTop!==0){
+    //     $(".pic").css("margin-top",0)
+    //   }
+    //   })
+
+    //   $(".xia").click(function(){
+    //     picTop=parseInt($(".pic").css("margin-top"))
+    //     if(picTop===0){
+    //       $(".pic").css("margin-top",-148)
+    //     }
+    //   })
+  </script>
+</body>
+
+</html>

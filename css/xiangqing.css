@@ -1,0 +1,256 @@
+.header-4{
+  /* padding-left:35px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width:100%;
+  background-color: #313131;
+}
+.header-4 span{
+  color:#999999;
+  font-size:1.2rem;
+}
+.header-4 .header-home{
+  float: left;
+  margin-left: 180px;
+  display: block;
+  font-size:1rem;
+  color:#fff;
+}
+.icon-fangzi{
+  color:#fff;
+}
+
+.header4-copy{
+  position: fixed;
+  top:38px;
+  display: none;
+  z-index:1000;
+}
+/* .zoom-desc a{
+  margin-top: 20px;
+  display: block;
+} */
+.banner-main{
+  position: relative;
+  padding-top:200px;
+  /* padding-bottom: 800px; */
+}
+/* .swiper-button-prev,.swiper-button-prev{
+  position: absolute;
+  left:35px;
+}
+.swiper-button-prev{
+  top:0;
+}
+.swiper-button-prev{
+  bottom:0;
+}
+.swiper-slide{
+  height:128px;
+} */
+.shangsanjiao,.xiasanjiao{
+  color:#fff;
+  font-size:25px;
+   
+  display: block;
+  line-height:1;
+}
+.shangsanjiao{
+  margin-left:40px; 
+}
+.xiasanjiao{
+  transform:rotate(180deg);
+  margin-right:40px;
+}
+.shang,.xia{
+  position: absolute;
+  left:10%;
+  width:80%;
+  height:25px;
+  background-color: rgba(60,62,46,0.8);
+}
+/* .shang{
+  top:20px;
+} */
+.xia{
+  bottom:20px;
+}
+.jieshao{
+  float: right;
+  margin-top: -100px;
+}
+.jieshao p,.jieshao span{
+  line-height:1.8;
+}
+.jieshao p:nth-child(1){
+  font-size:1.6rem;
+}
+.shuoming{
+  font-size:1.8rem;
+}
+.bianma{
+  font-size:1.2rem;
+  color:#bcaab1;
+}
+.price{
+  color:#af0035;
+font-size:1.4rem;
+}
+.yanse span{
+  color: #666666;
+  font-size: 1.2rem;
+  margin-top: 6px;
+  display: block;
+  float: left;
+}
+.yanse img{
+  padding: 5px;
+  
+}
+.yanse img:nth-child(3){
+  border:2px solid #ccc;
+}
+.chima{
+  margin-top: 10px;
+}
+.chima .span{
+  font-size:1rem;
+  color:#4f3f4f;
+}
+.chima span:nth-child(1){
+  font-size:1.2rem;
+  color:#666666;
+}
+.chimabiao{
+  display: block;
+  float: right;
+  margin-right: 67px;
+  margin-left:3px;
+  font-size: 1.1rem;
+  color: #666666;
+}
+.icon-zhichiicon{
+  font-size: 2rem;
+  color: #000;
+  display: block;
+  float: right;
+  margin-top: -7px;
+}
+.goumai{
+  position: relative;
+}
+.goumai span{
+  font-size:1.2rem;
+  color:#000;
+}
+.goumai span:first-child{
+  font-size:1.4rem;
+}
+.jiahaoHe{
+  float: left;
+  width:40px;
+  background-color: #000;
+  height:25px;
+  display: block;
+  position: absolute;
+  left:64px;
+  top:0px;
+}
+.jieshao .jiahao{
+  display: block;
+  width: 14px;
+  border:2px solid #fff;
+  border-radius:50%;
+  color:#fff;
+ height:14px;
+ text-align:center;
+ line-height:14px;
+ margin: 4px auto;
+}
+.jiashoucang{
+  margin-left: 48px;
+}
+.jieshao-a{
+  color:#313131;
+  margin-top: 18px;
+  display: block;
+}
+.jiaru{
+  border:1px solid #000;
+  text-align:center;
+  font-size:1.6rem;
+  line-height:37px;
+  margin-top: 10px;
+  cursor: pointer;
+  /* transition:all 0.3s; */
+}
+.jiaru:hover{
+  color:#916912;
+  border:1px solid #916912;
+}
+.banner-main-top{
+  padding-bottom: 300px;
+}
+.banner-main-left{
+  float: left;
+  width:460px; 
+  height:374px;
+  margin-left: 100px;
+  padding-right:43px ;
+  border-right:1px solid #eeeeee;
+}
+.banner-main-left p span{
+  color:#666666;
+  line-height:24px;
+  font-size:1.2rem;
+}
+.banner-main-right{
+  margin-left: 40px;
+  /* width:456px; */
+  float: left;
+  line-height:24px;
+}
+.banner-main-right p span{
+  color:#666666;
+}
+.banner-main-right p span:nth-child(2){
+  margin-left: 68px;
+}
+.banner-main-right p:first-child span:last-child{
+  margin-left: 44px;
+}
+.zhuyi-shi span{
+  float: left;
+  display: block;
+  color:#666666;
+}
+.zhuyi-img{
+  float: left;
+  width:465px;
+  margin-left: 48px;
+}
+.zhuyi-img p{
+  line-height:24px;
+  color:#666666;
+  font-size:1.2rem;
+}
+.liulan p,.liulan-logo,.liulan-shuoming{
+  color:#666666;
+  font-size:1.2rem;
+  line-height:24px;
+}
+.liulan-logo,.liulan-shuoming{
+  margin-left: 124px;
+
+}
+.liulan{
+  margin-top: 50px;
+  margin-left: 124px;
+  width:188px;
+  border-bottom:1px solid #eeeeee;
+}
+.liulan img{
+  width:80%;
+  display: block;
+  margin: 0 auto;
+}

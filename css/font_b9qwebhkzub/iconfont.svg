@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="zhichiicon" unicode="&#58914;" d="M1018.88 147.968H18.773333v488.106667h1000.106667v-488.106667z m-955.733333 44.373333h911.36v399.36H63.146667v-399.36zM143.872 605.866667h44.373333v-172.885334h-44.373333zM285.184 605.866667h44.373333v-238.933334h-44.373333zM426.496 605.866667h44.373333v-172.885334h-44.373333zM567.808 605.866667h44.373333v-238.933334h-44.373333zM709.12 605.866667h44.373333v-172.885334h-44.373333zM850.432 605.866667h44.373333v-238.933334h-44.373333z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

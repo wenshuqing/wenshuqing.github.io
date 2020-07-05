@@ -1,0 +1,136 @@
+body {
+  background-image: url("../images/denglu1.jpg");;
+}
+/* .banner {
+
+  position: absolute;
+  top: 0;
+} */
+.denglu {
+  background-color: #fff;
+  width: 540px;
+  border: 1px solid rgb(126, 121, 121);
+  padding-bottom: 37px;
+}
+.denglu-main {
+  margin-left: 30px;
+  margin-top: 27px;
+}
+.denglu-welcome {
+  font-size: 1.2rem;
+}
+.denglu-telephone,
+.denglu-denglu {
+  margin-top: 18px;
+  width: 470px;
+  height: 28px;
+  border: 1px solid #f0f0ef;
+}
+.denglu-yanzheng {
+  margin-top: 10px;
+  width: 340px;
+}
+.denglu-yanzhengma,
+.denglu-dongtaima {
+  float: left;
+  width: 245px;
+  height: 28px;
+  border: 1px solid #f0f0ef;
+}
+.denglu-dongtaima {
+  margin-top: 10px;
+}
+.ma,
+.denglu-huoqu {
+  float: left;
+  width: 90px;
+  border: 0;
+  background-image: linear-gradient(to right, #fff, red);
+  font-size: 1.6rem;
+  line-height: 30px;
+  color: rgb(26, 128, 77);
+  margin-left: 3px;
+}
+.denglu-huoqu {
+  width: 83px;
+  height: 28px;
+  margin-top: 11px;
+  background-image: linear-gradient(to right, #f93d69, #f93d69);
+  color: #fff;
+  font-size: 1.2rem;
+}
+.denglu-denglu {
+  border: 0;
+  background-color: #f93d69;
+  margin-top: 13px;
+  color: #fff;
+}
+.denglu-zhuce,
+.denglu-wangji {
+  display: block;
+  float: right;
+  margin-top: 16px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-right: 40px;
+  color: #0d5b82;
+}
+.denglu-zhuce {
+  margin-right: 6px;
+}
+.zhuce-yanzhengma {
+  width: 131px;
+}
+.zhuce-ma {
+  background-image: linear-gradient(to right, #fff, #555555);
+}
+.zhuce-huoqu {
+  width: 110px;
+}
+.zhuce-dongtaima {
+  width: 225px;
+}
+.zhuce-fanhuidenglu {
+  margin-right: 40px;
+}
+.zhaohui-biaoti {
+  width: 470px;
+  height: 28px;
+  float: left;
+  clear: both;
+  margin-top: 16px;
+}
+.shouji-zhaohui,
+.youxiang-zhaohui {
+  float: left;
+  width: 235px;
+  background-color: #f1f1f1;
+  border: 0;
+  font-size: 1.1rem;
+  line-height: 26px;
+}
+.shouji-zhaohui {
+  border-bottom: 4px solid #e74064;
+}
+.youxiang-zhaohui {
+  height: 30px;
+}
+.zhaohui-youxiang-main {
+  display: none;
+}
+.denglu-ye,
+.zhuce,
+.zhaohui {
+  position: absolute;
+  top: 150px;
+  left: 600px;
+}
+.zhuce,
+.zhaohui {
+  display: none;
+}
+.error p {
+  /* font-size:1.4rem; */
+  color: #e74064;
+  display: none;
+}

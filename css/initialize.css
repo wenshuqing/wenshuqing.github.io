@@ -1,0 +1,18 @@
+html {
+  font-size: 10px;
+}
+html * {
+  margin: 0;
+  padding: 0;
+}
+/* 万能清除浮动 （没有高度的布局，这个是必须的）*/
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  *height: 1%;
+}

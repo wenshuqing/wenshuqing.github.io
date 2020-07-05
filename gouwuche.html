@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/font_wdie9wpcfu/iconfont.css">
+</head>
+
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/initialize.css">
+    <link rel="stylesheet" href="./css/gouwuche.css">
+  </head>
+
+  <body>
+    <header class="clearfix">
+      <span class="gouwuche-logo">TRENDIANO</span>
+      <div class="gouwuche-headerRight">
+        <span>登录&nbsp;&nbsp;</span>
+        <span>注册&nbsp;&nbsp;</span>
+        <span>我的账户&nbsp;&nbsp;</span>
+        <span>我的收藏&nbsp;&nbsp;</span>
+        <span>购物袋（ <span class="gouwuche-number">0</span> ）</span>
+      </div>
+    </header>
+    <div class="banner">
+      <div class="banner-main">
+        <div class="banner-main-top">
+          <div class="banner-main-buzhou clearfix">
+            <div class="dingdan clearfix">
+              <div class="dingdan1">
+                <span>1</span>
+                <p>查看购物袋</p>
+              </div>
+              <div class="line"></div>
+            </div>
+
+            <div class="dingdan clearfix">
+              <div class="dingdan1">
+                <span>2</span>
+                <p>订单确认</p>
+              </div>
+              <div class="line"></div>
+            </div>
+
+            <div class="dingdan">
+              <span>3</span>
+              <p>订单支付</p>
+            </div>
+          </div>
+          <div class="banner-main-gouwudai clearfix">
+            <p class="gouwudai-p1">购物袋</p>
+            <span class="iconfont iconfont-1 icon-sanjiao_xia"></span>
+            <p class="gouwudai-p2">优惠：单笔消费，满699元免邮</p>
+            <span class="iconfont icon-sanjiao_xia"></span>
+            <p class="biaoti">
+              <span>商品名称</span>
+              <span>颜色/尺码</span>
+              <span>单价</span>
+              <span>数量</span>
+              <span>小计</span>
+            </p>
+            <div class="shoppingCart">
+
+              <div class="cart-content"></div>
+              <div class="cart-foot">
+                <div class="cart-foot-1">
+                  <input class="all" checked type="checkbox" name="" id="" />全选&nbsp;&nbsp;
+                  <span class="del-checked">删除已选</span>
+                </div>
+                <div class="jiesuan clearfix">
+                  <span class="yixuan">已选：<span class="total-num">0</span>件</span>
+                  <p class="zongjijine"><span>总计金额（不含运费）：</span><span class="total-price"></span></p>
+                  <div class="last-jiesuan">马上结算</div>
+                </div>
+              </div>
+            </div>
+            <div class="empty">购物车为空</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="footer-p1">TRENDIANO</p>
+      <p class="footer-p2">隐私申明 联系我们</p>
+      <p class="footer-p3">Copyright @ 2010-2020 广州赫基信息科技有限公司版权所有 增值电信业务经营许可证 粤B2-20100553 粤ICP备10229258-4号</p>
+    </footer>
+    <div class="fanhui">
+      <div class="fanhui-top clearfix"><span>TOP</span><span class="iconfont icon-sanjiao_xia"></span></div>
+      <a href="./shouye.html" class="fanhui-shouye">返回首页</a>
+      <div class="fanhui-shouye">联系客服</div>
+    </div>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script>
+      var goods = [{
+          goodsimg: "./images/gouwudailvse.jpg",
+          name: "[促销] Tre春夏大减价7-9 <br>TRENDIANO</br>【2件9折 3件8折】宽松连帽短袖风衣外套</br>货号：3RC2092100010",
+          space: "绿色/M",
+          price: 719,
+          num: 1,
+        },
+        {
+          goodsimg: "./images/gouwudaiyinse.jpg",
+          name: "[促销] Tre春夏大减价7-9 <br>TRENDIANO</br>【2件9折 3件8折】宽松连帽短袖风衣外套</br>货号：3RC2092100010",
+          space: "米白/M",
+          price: 719,
+          num: 1,
+        },
+        {
+          goodsimg: "./images/gouwudaiyinse.jpg",
+          name: "[促销] Tre春夏大减价7-9 <br>TRENDIANO</br>【2件9折 3件8折】宽松连帽短袖风衣外套</br>货号：3RC2092100010",
+          space: "米白/L",
+          price: 719,
+          num: 1,
+        },
+        {
+          goodsimg: "./images/gouwudailvse.jpg",
+          name: "[促销] Tre春夏大减价7-9 <br>TRENDIANO</br>【2件9折 3件8折】宽松连帽短袖风衣外套</br>货号：3RC2092100010",
+          space: "绿色/XL",
+          price: 719,
+          num: 1,
+        },
+        {
+          goodsimg: "./images/gouwudailvse.jpg",
+          name: "[促销] Tre春夏大减价7-9 <br>TRENDIANO</br>【2件9折 3件8折】宽松连帽短袖风衣外套</br>货号：3RC2092100010",
+          space: "绿色/L",
+          price: 719,
+          num: 1,
+        },
+      ];
+
+      if (goods.length) {
+        $('.shoppingCart').addClass('show')
+        // 生成购物车商品
+        goods.forEach(function (item) {
+          var goodsItem = $('<div class="goods-item">')
+          goodsItem.html(
+            `<input class="radio" type="checkbox" checked />  <img class="gouwudai-images"
+          src="${item.goodsimg}"/> <span>${
+              item.name
+            }</span><span class="space">${
+              item.space
+            }</span><span class="price">${
+              item.price
+            }</span><div class="shanchu"><div class="num-div"><span class="num">${
+              item.num
+            }</span><div class="jiantou"><span class="add iconfont icon-sanjiao_xia"></span><span class="sub iconfont icon-shang"></span></div></div>
+            <div class="del">删除</div></div>
+            <span class='total'>${
+              item.num * item.price
+            }</span>`
+          )
+          $('.cart-content').append(goodsItem)
+        })
+        getTotal($('.radio'))
+        // 生成了购物车数据进行事件绑定
+        // 复选框的点击事件使用 change
+        // change 的意思就是当复选框的选中效果发生改变的时候触发
+        // 1. 点击全选按钮
+        $('.all').change(function () {
+          // 所有人和我的状态一样
+          var state = $(this).prop('checked')
+          $('.shoppingCart input:checkbox').prop('checked', state)
+          getTotal($('.radio'))
+        })
+        // 2. 点击单选的复选框
+        $('.radio').change(function () {
+          // a. 先看当前点击的是否是未选中
+          // 未选中的话那么全选一定未选中
+          // b. 如果选中了，要看所有人中是否有未选中的 有全选未选中 没有的话全选选中
+          var state = $(this).prop('checked')
+          if (state) {
+            //  each 的功能就是遍历所有的元素执行函数
+            // 默认所有人都选中了
+            var allChecked = true
+            // 要查看当前页面上的所有存在的商品
+            // 不能把获取所有单选的选择器定义在外面
+            $('.radio').each(function () {
+              // 在这个函数内 $(this) 指的就是当前的元素
+              console.log('查询次数')
+              if (!$(this).prop('checked')) {
+                allChecked = false
+              }
+            })
+            $('.all').prop('checked', allChecked)
+          } else {
+            $('.all').prop('checked', false)
+          }
+          getTotal($('.radio'))
+        })
+        // 3. 删除商品
+        $('.del').click(function () {
+          $(this).parent().remove()
+          // 判断当前商品是否选中再去计算
+          getTotal($('.radio'))
+        })
+        // 4. 删除选中的
+        $('.del-checked').click(function () {
+          $('.radio').each(function () {
+            if ($(this).prop('checked')) {
+              $(this).parent().remove()
+            }
+          })
+          // 可以不计算直接设置成 0
+          getTotal($('.radio'))
+        })
+        // 5. 加号减号
+        $('.add').click(function () {
+          var num = $(this).parents('.goods-item').find('.num').text() * 1
+          var price = $(this).parents('.goods-item').find('.price').text() * 1
+          num++
+          $(this).parents('.goods-item').find('.num').text(num)
+          $(this)
+            .parents('.goods-item')
+            .find('.total')
+            .text(num * price)
+          getTotal($('.radio'))
+        })
+        $('.sub').click(function () {
+          var num = $(this).parents('.goods-item').find('.num').text() * 1
+          var price = $(this).parents('.goods-item').find('.price').text() * 1
+          if (num > 1) {
+            num--
+            $(this).parents('.goods-item').find('.num').text(num)
+            $(this)
+              .parents('.goods-item')
+              .find('.total')
+              .text(num * price)
+            getTotal($('.radio'))
+          }
+        })
+        // 计算总价和选中商品数
+        // 将计算总价和计算选中的总数用一个函数去实现
+        // 查看当前页面的所有商品 看他们的单选复选框是否选中 如果选中的话算在总价内
+        function getTotal(allGoods) {
+          var totalNum = 0
+          var totalPrice = 0
+          allGoods.each(function () {
+            if ($(this).prop('checked')) {
+              totalNum =
+                totalNum +
+                $(this).parents('.goods-item').find('.num').text() * 1
+              totalPrice =
+                totalPrice +
+                $(this).parents('.goods-item').find('.num').text() *
+                1 *
+                $(this).parents('.goods-item').find('.price').text() *
+                1
+            }
+          })
+          $('.total-price').text(totalPrice)
+          $('.total-num').text(totalNum)
+          // return {
+          //   totalNum: totalNum,
+          //   totalPrice: totalPrice,
+          // }
+        }
+      } else {
+        $('.empty').addClass('show')
+      }
+      $(window).scroll(function () {
+        if ($(this).scrollTop() < 100) {
+          $(".fanhui-top").css({
+            "display": "none"
+          })
+        } else {
+          $(".fanhui-top").css({
+            "display": "block"
+          })
+        }
+      })
+      $(".fanhui-top").click(function () {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 500)
+      })
+    </script>
+  </body>
+
+  </html>
+</body>
+
+</html>

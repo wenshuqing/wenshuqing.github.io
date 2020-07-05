@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/initialize.css" />
+    <link rel="stylesheet" href="./css/denglu.css" />
+    <title>登录</title>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="banner-main">
+        <div class="denglu denglu-ye clearfix">
+          <div class="denglu-main clearfix">
+            <h1 class="denglu-welcome">
+              欢迎回来！请登录
+            </h1>
+            <input
+              type="text"
+              class="denglu-telephone"
+              placeholder="手机号码"
+            />
+            <div class="denglu-yanzheng clearfix">
+              <input
+                type="text"
+                class="denglu-yanzhengma denglu-tupianma"
+                placeholder="验证码"
+              />
+              <button class="ma ma1">2373</button>
+              <!-- <button class="ma ma2">3366</button> -->
+              <input
+                type="text"
+                class="denglu-dongtaima"
+                placeholder="手机动态码"
+              />
+              <button class="denglu-huoqu">获取动态码</button>
+            </div>
+            <div class="error">
+              <p class="error-denglu-telephone"></p>
+              <p class="error-denglu-yanzhengma"></p>
+              <p class="error-denglu-dongtaima"></p>
+            </div>
+            <button class="denglu-denglu">登录</button>
+          </div>
+          <a class="denglu-wangji denglu-1" href="#">忘记密码</a>
+          <a class="denglu-zhuce denglu-2" href="#">我要注册</a>
+        </div>
+        <!-- 注册 -->
+        <div class="zhuce denglu clearfix">
+          <div class="denglu-main zhuce-main clearfix">
+            <h1 class="denglu-welcome">新用户注册</h1>
+            <input
+              type="text"
+              class="denglu-telephone zhuce-telephone"
+              placeholder="手机号码"
+            />
+            <div class="denglu-yanzheng clearfix">
+              <input
+                type="text"
+                class="denglu-yanzhengma zhuce-yanzhengma"
+                placeholder="图片验证码"
+              />
+              <button class="ma zhuce-ma">3872</button>
+              <input
+                type="text"
+                class="denglu-telephone zhuce-mima"
+                placeholder="密码"
+              /><input
+                type="text"
+                class="denglu-telephone zhuce-mima queren-mima"
+                placeholder="确认密码"
+              />
+              <input
+                type="text"
+                class="zhuce-dongtaima denglu-dongtaima"
+                placeholder="填写手机验证码"
+              />
+              <button class="zhuce-huoqu denglu-huoqu">获取手机验证码</button>
+            </div>
+            <div class="error">
+              <p class="error-zhuce-telephone">手机号码格式不正确</p>
+              <p class="error-zhuce-yanzhengma">验证码输入错误</p>
+              <p class="error-zhuce-mima">密码8-16位，同时包含字母和数字</p>
+              <p class="error-zhuce-dongtaima">动态码错误</p>
+            </div>
+            <button class="zhuce-zhuce denglu-denglu">注册</button>
+            <a href="#" class="zhuce-fanhuidenglu denglu-zhuce">
+              返回登录
+            </a>
+          </div>
+        </div>
+        <!-- 找回 -->
+        <div class="zhaohui denglu clearfix">
+          <div class="zhaohui-shouji-main denglu-main clearfix">
+            <h1 class="denglu-welcome">找回密码</h1>
+            <div class="zhaohui-biaoti clearfix">
+              <button class="shouji-1 shouji-zhaohui">通过手机找回</button>
+              <button class="shouji-2 youxiang-zhaohui">通过邮箱找回</button>
+            </div>
+            <input
+              type="text"
+              class="denglu-telephone"
+              placeholder="您的手机号"
+            />
+            <div class="denglu-yanzheng clearfix">
+              <input
+                type="text"
+                class="denglu-yanzhengma"
+                placeholder="图片验证码"
+              />
+              <button class="ma ma1">2373</button>
+              <!-- <button class="ma ma2">3366</button> -->
+              <input
+                type="text"
+                class="denglu-dongtaima"
+                placeholder="手机验证码"
+              />
+              <button class="denglu-huoqu">获取验证码</button>
+            </div>
+            <button class="zhaohui-zhaohui denglu-denglu">找回</button>
+            <a class="denglu-wangji zhaohui-1" href="#">重新注册</a>
+            <a class="denglu-zhuce zhaohui-2" href="#">返回登录</a>
+          </div>
+
+          <div class="zhaohui-youxiang-main denglu-main clearfix">
+            <h1 class="denglu-welcome">找回密码</h1>
+            <div class="zhaohui-biaoti clearfix">
+              <button class="youxiang-1 youxiang-zhaohui">通过手机找回</button>
+              <button class="youxiang-2 shouji-zhaohui">通过邮箱找回</button>
+            </div>
+            <input
+              type="text"
+              class="denglu-telephone"
+              placeholder="您的官网邮箱"
+            />
+            <div class="denglu-yanzheng clearfix">
+              <input
+                type="text"
+                class="denglu-yanzhengma"
+                placeholder="图片验证码"
+              />
+              <button class="ma ma1">2373</button>
+              <!-- <button class="ma ma2">3366</button> -->
+            </div>
+            <button class="zhaohui-zhaohui denglu-denglu">找回</button>
+            <a class="denglu-wangji zhaohui-1" href="#">重新注册</a>
+            <a class="denglu-zhuce zhaohui-2" href="#">返回登录</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+      $(".shouji-2").click(function() {
+        $(".zhaohui-shouji-main")
+          .css("display", "none")
+          .siblings(".zhaohui-youxiang-main")
+          .css("display", "block");
+      });
+      $(".youxiang-1").click(function() {
+        $(".zhaohui-shouji-main")
+          .css("display", "block")
+          .siblings(".zhaohui-youxiang-main")
+          .css("display", "none");
+      });
+      $(".denglu-1").click(function() {
+        $(".denglu-ye")
+          .css("display", "none")
+          .siblings(".zhaohui")
+          .css("display", "block");
+      });
+      $(".denglu-2").click(function() {
+        $(".denglu-ye")
+          .css("display", "none")
+          .siblings(".zhuce")
+          .css("display", "block");
+      });
+      $(".zhuce-fanhuidenglu").click(function() {
+        $(".zhuce")
+          .css("display", "none")
+          .siblings(".denglu-ye")
+          .css("display", "block");
+      });
+      $(".zhaohui-1").click(function() {
+        $(".zhaohui")
+          .css("display", "none")
+          .siblings(".zhuce")
+          .css("display", "block");
+      });
+      $(".zhaohui-2").click(function() {
+        $(".zhaohui")
+          .css("display", "none")
+          .siblings(".denglu-ye")
+          .css("display", "block");
+      });
+      var telephoneRe = /^1[3458][0-9]{9}$/;
+      // var tupianYan = $(".denglu-yanzheng .ma1").value;
+
+      $(".denglu-ye .denglu-denglu").click(function() {
+        var telephone = $(".denglu-telephone").val();
+        var tupian = $(".denglu-tupianma").val();
+        if (tupian !== "2373") {
+          $(".error-denglu-yanzhengma")
+            .css("display", "block")
+            .text("验证码错误");
+        }
+        if (telephone.length === 0) {
+          $(".error-denglu-telephone")
+            .css("display", "block")
+            .text("请输入手机号");
+        } else if (!telephoneRe.test(telephone)) {
+          $(".error-denglu-telephone")
+            .css("display", "block")
+            .text("手机号码格式不正确");
+        }
+      });
+      $(".zhuce .zhuce-zhuce").click(function() {
+        var telephone = $(".zhuce-telephone").val();
+        var tupian = $(".zhuce-yanzhengma").val();
+
+        if (tupian !== "3872") {
+          $(".error-zhuce-yanzhengma").css("display", "block");
+        } else {
+          $(".error-zhuce-yanzhengma").css("display", "none");
+        }
+        if (telephone.length === 0) {
+          $(".error-zhuce-telephone")
+            .css("display", "block")
+            .text("请输入手机号");
+        } else if (!telephoneRe.test(telephone)) {
+          $(".error-zhuce-telephone")
+            .css("display", "block")
+            .text("手机号码格式不正确");
+        }
+        var zhuceMima = $(".zhuce-mima").val();
+        var querenMima = $(".queren-mima").val();
+        var mimaLength = zhuceMima.length;
+        var mimaReShuzi = /[A-z0-9+]/;
+
+        var mimaReZimu = /[A-z]+/;
+        console.log(mimaReZimu(aa));
+
+        if (mimaLength < 8 || mimaLength > 16) {
+          $(".error-zhuce-mima")
+            .css("display", "block")
+            .text("密码8-16位，同时包含字母和数字");
+          console.log(1);
+        } else if (zhuceMima !== querenMima) {
+          $(".error-zhuce-mima")
+            .css("display", "block")
+            .text("密码和确认密码不相同");
+          console.log(2);
+        } else if (!mimaReShuzi(zhuceMima) || !mimaReZimu(zhuceMima)) {
+          $(".error-zhuce-mima")
+            .css("display", "block")
+            .text("密码8-16位，同时包含字母和数字");
+          console.log(3);
+        }
+      });
+    </script>
+  </body>
+</html>
